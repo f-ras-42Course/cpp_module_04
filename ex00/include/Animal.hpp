@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/30 17:00:55 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/31 12:48:44 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class Animal
 {
-private:
-	/* data */
-public:
-	Animal(/* args */);
-	Animal(const Animal& animal);
-	~Animal();
-	Animal& operator=(const Animal& other);
+	private:
+		/* data */
+	public:
+		Animal(/* args */);
+		Animal(const Animal& animal);
+		~Animal();
+		Animal& operator=(const Animal& other);
 };
 
 #endif

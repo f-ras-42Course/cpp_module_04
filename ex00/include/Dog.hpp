@@ -14,16 +14,17 @@
 # define DOG_HPP
 
 # include <iostream>
+# include "Animal.hpp"
 
-class Dog
+class Dog: public Animal
 {
-private:
-	/* data */
-public:
-	Dog(/* args */);
-	Dog(const Dog& animal);
-	~Dog();
-	Dog& operator=(const Dog& other);
+	private:
+		/* data */
+	public:
+		Dog(/* args */);
+		Dog(const Dog& animal);
+		~Dog();
+		Dog& operator=(const Dog& other);
 };
 
 #endif

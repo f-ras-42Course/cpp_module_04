@@ -14,16 +14,17 @@
 # define CAT_HPP
 
 # include <iostream>
+# include "Animal.hpp"
 
-class Cat
+class Cat: public Animal
 {
-private:
-	/* data */
-public:
-	Cat(/* args */);
-	Cat(const Cat& animal);
-	~Cat();
-	Cat& operator=(const Cat& other);
+	private:
+		/* data */
+	public:
+		Cat(/* args */);
+		Cat(const Cat& animal);
+		~Cat();
+		Cat& operator=(const Cat& other);
 };
 
 #endif
