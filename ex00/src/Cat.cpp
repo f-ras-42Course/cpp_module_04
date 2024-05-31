@@ -12,19 +12,23 @@
 
 #include "Cat.hpp"
 
-Cat::Cat(/* args */)
+Cat::Cat()
 {
-	
+	std::cout << "Cat constructor called\n";
+	type_ = "CAT";
 }
-Cat::Cat(const Cat& animal)
+Cat::Cat(const Cat& other)
 {
-	
+	std::cout << "Cat copy constructor called\n";
+	type_ = other.type_;
 }
 Cat::~Cat()
 {
-	
+	std::cout << "Cat deconstructor called\n"
 }
 Cat& Cat::operator=(const Cat& other)
 {
-	
+	std::cout << "Cat copy assignment operator called\n";
+	type_ = other.type_;
+	return *this;
 }

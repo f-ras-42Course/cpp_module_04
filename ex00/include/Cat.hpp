@@ -22,7 +22,7 @@ class Cat: public Animal
 		/* data */
 	public:
 		Cat(/* args */);
-		Cat(const Cat& animal);
+		Cat(const Cat& other);
 		~Cat();
 		Cat& operator=(const Cat& other);
 };

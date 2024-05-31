@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/31 12:48:44 by fras          ########   odam.nl         */
+/*   Updated: 2024/05/31 17:50:37 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 
 class Animal
 {
-	private:
-		/* data */
+	protected:
+		std::string type_;
 	public:
-		Animal(/* args */);
-		Animal(const Animal& animal);
+		Animal();
+		Animal(const Animal& other);
 		~Animal();
 		Animal& operator=(const Animal& other);
 };
