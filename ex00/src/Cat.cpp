@@ -15,7 +15,7 @@
 Cat::Cat()
 {
 	std::cout << "Cat constructor called\n";
-	type_ = "CAT";
+	type_ = "Cat";
 }
 Cat::Cat(const Cat& other)
 {
@@ -24,11 +24,16 @@ Cat::Cat(const Cat& other)
 }
 Cat::~Cat()
 {
-	std::cout << "Cat deconstructor called\n"
+	std::cout << "Cat deconstructor called\n";
 }
 Cat& Cat::operator=(const Cat& other)
 {
 	std::cout << "Cat copy assignment operator called\n";
 	type_ = other.type_;
 	return *this;
+}
+
+void makeSound()
+{
+	std::cout << "Meeooowww, meeeoowww\n";
 }

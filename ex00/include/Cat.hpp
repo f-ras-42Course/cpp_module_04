@@ -21,10 +21,11 @@ class Cat: public Animal
 	private:
 		/* data */
 	public:
-		Cat(/* args */);
+		Cat();
 		Cat(const Cat& other);
 		~Cat();
 		Cat& operator=(const Cat& other);
+		void makeSound();
 };
 
 #endif

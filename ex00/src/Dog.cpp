@@ -12,10 +12,10 @@
 
 #include "Dog.hpp"
 
-Dog::Dog(/* args */)
+Dog::Dog()
 {
 	std::cout << "Dog constructor called\n";
-	type_ = "DOG"; 
+	type_ = "Dog"; 
 }
 Dog::Dog(const Dog& other)
 {
@@ -31,4 +31,9 @@ Dog& Dog::operator=(const Dog& other)
 	std::cout << "Dog copy assignment operator called\n";
 	type_ = other.type_;
 	return *this;
+}
+
+void makeSound()
+{
+	std::cout << "Woof, wooffiee, woof\n";
 }

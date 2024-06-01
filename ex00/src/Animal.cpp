@@ -6,16 +6,16 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/05/31 18:05:12 by fras          ########   odam.nl         */
+/*   Updated: 2024/06/01 13:09:48 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(/* args */)
+Animal::Animal()
 {
 	std::cout << "Animal constructor called\n";
-	type_ = "ANIMAL";
+	type_ = "Animal";
 }
 Animal::Animal(const Animal& other)
 {
@@ -24,7 +24,7 @@ Animal::Animal(const Animal& other)
 }
 Animal::~Animal()
 {
-	std::cout << "Animal deconstructor called\n"
+	std::cout << "Animal deconstructor called\n";
 }
 Animal& Animal::operator=(const Animal& other)
 {
@@ -32,3 +32,13 @@ Animal& Animal::operator=(const Animal& other)
 	type_ = other.type_;
 	return *this;
 }
+
+void makeSound()
+{
+	std::cout << "The Animal makes a sound\n";
+}
+
+const std::string& Animal::getType() const
+{
+	return this->type_;
+}	
