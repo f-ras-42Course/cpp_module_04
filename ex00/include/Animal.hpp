@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/22 17:06:29 by fras          ########   odam.nl         */
+/*   Updated: 2024/08/22 17:44:04 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 
+// Todo : WrongCat // WrongDog
 class Animal
 {
 	protected:
@@ -22,9 +23,9 @@ class Animal
 	public:
 		Animal();
 		Animal(const Animal& other);
-		~Animal();
+		virtual ~Animal();
 		Animal& operator=(const Animal& other);
-		void makeSound() const;
+		virtual void makeSound() const;
 		const std::string& getType() const;	
 };
 
