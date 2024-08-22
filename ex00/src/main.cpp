@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.hpp                                         :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/22 17:06:29 by fras          ########   odam.nl         */
+/*   Created: 2024/06/01 13:02:56 by fras          #+#    #+#                 */
+/*   Updated: 2024/08/22 17:11:15 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-# include <iostream>
-
-class Animal
+int main()
 {
-	protected:
-		std::string type_;
-	public:
-		Animal();
-		Animal(const Animal& other);
-		~Animal();
-		Animal& operator=(const Animal& other);
-		void makeSound() const;
-		const std::string& getType() const;	
-};
-
-#endif
+	const Animal* meta = new Animal();
+	const Animal* cat = new Cat();
+	const Animal* dog = new Dog();
+	std::cout << cat->getType() << " = cat->getType()\n";
+	std::cout << dog->getType() << " = dog->getType()\n";
+	cat->makeSound();
+	dog->makeSound();
+	meta->makeSound();
+	delete cat;
+	delete dog;
+	delete meta;
+	return 0;
+}

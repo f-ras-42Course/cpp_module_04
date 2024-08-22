@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/06/01 13:09:48 by fras          ########   odam.nl         */
+/*   Updated: 2024/08/22 16:56:20 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Animal& Animal::operator=(const Animal& other)
 	return *this;
 }
 
-void makeSound()
+void Animal::makeSound() const
 {
 	std::cout << "The Animal makes a sound\n";
 }
@@ -41,4 +41,4 @@ void makeSound()
 const std::string& Animal::getType() const
 {
 	return this->type_;
-}	
+}

@@ -33,7 +33,7 @@ Cat& Cat::operator=(const Cat& other)
 	return *this;
 }
 
-void makeSound()
+void Cat::makeSound() const
 {
 	std::cout << "Meeooowww, meeeoowww\n";
 }
