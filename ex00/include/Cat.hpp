@@ -18,12 +18,10 @@
 
 class Cat: public Animal
 {
-	private:
-		/* data */
 	public:
 		Cat();
 		Cat(const Cat& other);
-		~Cat();
+		~Cat() override;
 		Cat& operator=(const Cat& other);
 		void makeSound() const override;
 };
