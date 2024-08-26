@@ -22,15 +22,17 @@ WrongCat::WrongCat(const WrongCat& other)
 	std::cout << "WrongCat copy constructor called\n";
 	type_ = other.type_;
 }
-WrongCat::~WrongCat()
-{
-	std::cout << "WrongCat deconstructor called\n";
-}
+
 WrongCat& WrongCat::operator=(const WrongCat& other)
 {
 	std::cout << "WrongCat copy assignment operator called\n";
 	type_ = other.type_;
 	return *this;
+}
+
+WrongCat::~WrongCat()
+{
+	std::cout << "WrongCat deconstructor called\n";
 }
 
 void WrongCat::makeSound() const

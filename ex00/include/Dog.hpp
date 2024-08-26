@@ -21,8 +21,8 @@ class Dog: public Animal
 	public:
 		Dog();
 		Dog(const Dog& other);
-		~Dog() override;
 		Dog& operator=(const Dog& other);
+		~Dog() override;
 		void makeSound() const override;
 };
 

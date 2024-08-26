@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/26 14:34:34 by fras          ########   odam.nl         */
+/*   Updated: 2024/08/26 18:24:13 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Animal
 	public:
 		Animal();
 		Animal(const Animal& other);
-		virtual ~Animal();
 		Animal& operator=(const Animal& other);
+		virtual ~Animal();
 		virtual void makeSound() const;
 		const std::string& getType() const;	
 };
