@@ -5,5 +5,7 @@
 *.o
 *.dSYM
 test
+*.idea
+*cmake-build-debug
 
 animals
