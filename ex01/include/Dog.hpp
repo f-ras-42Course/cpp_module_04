@@ -14,10 +14,12 @@
 # define DOG_HPP
 
 # include <iostream>
+# include "Brain.hpp"
 # include "Animal.hpp"
 
 class Dog: public Animal
 {
+	Brain* brain_;
 	public:
 		Dog();
 		Dog(const Dog& other);

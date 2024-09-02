@@ -14,10 +14,12 @@
 # define CAT_HPP
 
 # include <iostream>
+# include "Brain.hpp"
 # include "Animal.hpp"
 
 class Cat: public Animal
 {
+	Brain*	brain_;
 	public:
 		Cat();
 		Cat(const Cat& other);

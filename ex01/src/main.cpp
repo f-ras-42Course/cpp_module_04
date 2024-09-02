@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/06/01 13:02:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/27 20:34:46 by fras          ########   odam.nl         */
+/*   Updated: 2024/08/29 11:25:49 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 int main()
 {
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
-	delete dog;
-	delete cat;
+	const Animal* freddie = new Dog();
+	const Animal* simba = new Cat();
+	delete freddie;
+	delete simba;
 	return 0;
 }

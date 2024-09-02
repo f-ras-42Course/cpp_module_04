@@ -16,7 +16,9 @@ Cat::Cat()
 {
 	std::cout << "Cat constructor called\n";
 	type_ = "Cat";
+	brain_ = new Brain();
 }
+
 Cat::Cat(const Cat& other)
 {
 	std::cout << "Cat copy constructor called\n";

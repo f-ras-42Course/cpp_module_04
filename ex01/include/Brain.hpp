@@ -6,14 +6,15 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 18:21:48 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/26 18:37:44 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/02 13:10:01 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
 
-#include <string>
+# include <iostream>
+# include <string>
 
 class Brain
 {
