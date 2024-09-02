@@ -28,7 +28,10 @@ Cat::Cat(const Cat& other)
 Cat& Cat::operator=(const Cat& other)
 {
 	std::cout << "Cat copy assignment operator called\n";
-	type_ = other.type_;
+	if (this != &other)
+	{
+		type_ = other.type_;
+	}
 	return *this;
 }
 

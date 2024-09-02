@@ -13,6 +13,7 @@
 #include "Dog.hpp"
 
 Dog::Dog()
+: brain_(new Brain)
 {
 	std::cout << "Dog constructor called\n";
 	type_ = "Dog"; 
@@ -21,12 +22,16 @@ Dog::Dog(const Dog& other)
 {
 	std::cout << "Dog copy constructor called\n";
 	type_ = other.type_;
+	brain_ = new Brain;
 }
 
 Dog& Dog::operator=(const Dog& other)
 {
 	std::cout << "Dog copy assignment operator called\n";
-	type_ = other.type_;
+	if (this != &other)
+	{
+		type_ = other.type_;
+	}
 	return *this;
 }
 
