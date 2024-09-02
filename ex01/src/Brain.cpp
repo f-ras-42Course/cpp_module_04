@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 18:23:07 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/26 18:34:02 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/02 13:51:22 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 Brain::Brain()
 {
 	std::cout << "Brain constructor called\n";
-	type_ = "Brain";
 }
 Brain::Brain(const Brain& other)
 {
 	std::cout << "Brain copy constructor called\n";
-	type_ = other.type_;
+	std::copy(std::begin(other.ideas_), std::end(other.ideas_), ideas_);
 }
 
 Brain& Brain::operator=(const Brain& other)
 {
 	std::cout << "Brain copy assignment operator called\n";
-	type_ = other.type_;
+	if (this != &other)
+	{
+		std::copy(std::begin(other.ideas_), std::end(other.ideas_), ideas_);
+	}
 	return *this;
 }
 

@@ -19,7 +19,7 @@
 
 class Dog: public Animal
 {
-	Brain* brain_;
+	Brain*	brain_;
 	public:
 		Dog();
 		Dog(const Dog& other);

@@ -16,13 +16,31 @@ Cat::Cat()
 {
 	std::cout << "Cat constructor called\n";
 	type_ = "Cat";
-	brain_ = new Brain();
+	try
+	{
+		brain_ = new Brain();
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << "Memory allocation failed: " << e.what() << '\n';
+		brain_ = nullptr;
+	}
 }
 
 Cat::Cat(const Cat& other)
 {
 	std::cout << "Cat copy constructor called\n";
 	type_ = other.type_;
+	try
+	{
+		brain_ = new Brain();
+		*brain_ = *other.brain_;
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << "Memory allocation failed: " << e.what() << '\n';
+		brain_ = nullptr;
+	}
 }
 
 Cat& Cat::operator=(const Cat& other)
@@ -31,6 +49,7 @@ Cat& Cat::operator=(const Cat& other)
 	if (this != &other)
 	{
 		type_ = other.type_;
+		*brain_ = *other.brain_;
 	}
 	return *this;
 }
@@ -38,6 +57,7 @@ Cat& Cat::operator=(const Cat& other)
 Cat::~Cat()
 {
 	std::cout << "Cat deconstructor called\n";
+	delete brain_;
 }
 
 void Cat::makeSound() const

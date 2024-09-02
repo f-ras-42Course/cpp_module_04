@@ -13,16 +13,34 @@
 #include "Dog.hpp"
 
 Dog::Dog()
-: brain_(new Brain)
 {
 	std::cout << "Dog constructor called\n";
 	type_ = "Dog"; 
+	try
+	{
+		brain_ = new Brain();
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << "Memory allocation failed: " << e.what() << '\n';
+		brain_ = nullptr;
+	}
 }
+
 Dog::Dog(const Dog& other)
 {
 	std::cout << "Dog copy constructor called\n";
 	type_ = other.type_;
-	brain_ = new Brain;
+	try
+	{
+		brain_ = new Brain();
+		*brain_ = *other.brain_;
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << "Memory allocation failed: " << e.what() << '\n';
+		brain_ = nullptr;
+	}
 }
 
 Dog& Dog::operator=(const Dog& other)
@@ -31,6 +49,7 @@ Dog& Dog::operator=(const Dog& other)
 	if (this != &other)
 	{
 		type_ = other.type_;
+		*brain_ = *other.brain_;
 	}
 	return *this;
 }
@@ -38,6 +57,7 @@ Dog& Dog::operator=(const Dog& other)
 Dog::~Dog()
 {
 	std::cout << "Dog deconstructor called\n";
+	delete brain_;
 }
 
 void Dog::makeSound() const
