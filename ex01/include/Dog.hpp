@@ -16,16 +16,18 @@
 # include <iostream>
 # include "Brain.hpp"
 # include "Animal.hpp"
+# include <memory>
 
 class Dog: public Animal
 {
-	Brain*	brain_;
 	public:
 		Dog();
 		Dog(const Dog& other);
 		Dog& operator=(const Dog& other);
 		~Dog() override;
 		void makeSound() const override;
+	private:
+		std::unique_ptr<Brain> brain_;
 };
 
 #endif

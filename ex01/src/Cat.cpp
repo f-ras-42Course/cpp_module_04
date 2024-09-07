@@ -13,34 +13,18 @@
 #include "Cat.hpp"
 
 Cat::Cat()
+: brain_(std::make_unique<Brain>())
 {
 	std::cout << "Cat constructor called\n";
 	type_ = "Cat";
-	try
-	{
-		brain_ = new Brain();
-	}
-	catch(const std::bad_alloc& e)
-	{
-		std::cerr << "Memory allocation failed: " << e.what() << '\n';
-		brain_ = nullptr;
-	}
 }
 
 Cat::Cat(const Cat& other)
+: brain_(std::make_unique<Brain>())
 {
 	std::cout << "Cat copy constructor called\n";
 	type_ = other.type_;
-	try
-	{
-		brain_ = new Brain();
-		*brain_ = *other.brain_;
-	}
-	catch(const std::bad_alloc& e)
-	{
-		std::cerr << "Memory allocation failed: " << e.what() << '\n';
-		brain_ = nullptr;
-	}
+	*brain_ = *other.brain_;
 }
 
 Cat& Cat::operator=(const Cat& other)
@@ -57,7 +41,6 @@ Cat& Cat::operator=(const Cat& other)
 Cat::~Cat()
 {
 	std::cout << "Cat deconstructor called\n";
-	delete brain_;
 }
 
 void Cat::makeSound() const
