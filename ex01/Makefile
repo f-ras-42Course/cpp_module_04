@@ -6,7 +6,7 @@
 #    By: fras <fras@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/05/30 16:42:20 by fras          #+#    #+#                  #
-#    Updated: 2024/05/30 16:42:23 by fras          ########   odam.nl          #
+#    Updated: 2024/09/09 13:37:31 by fras          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ CFLAGS += -g -fsanitize=address
 endif
 
 ifndef CPP98
-CFLAGS += -std=c++11
+CFLAGS += -std=c++20
 endif
 
 ifdef CPP98
