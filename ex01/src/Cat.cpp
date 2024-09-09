@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 12:02:44 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/09 16:06:41 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,14 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "Meeooowww, meeeoowww\n";
+}
+
+void Cat::setIdea(const std::string idea)
+{
+	brain_->setIdea(idea);
+}
+
+void Cat::printIdeas() const
+{
+	brain_->printIdeas();
 }

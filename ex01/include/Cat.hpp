@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 12:02:51 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/09 16:42:10 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 # define CAT_HPP
 
 # include <iostream>
-# include "Brain.hpp"
 # include "Animal.hpp"
-# include <memory>
+# include "Brain.hpp"
 
 class Cat: public Animal
 {
@@ -26,6 +25,8 @@ class Cat: public Animal
 		Cat& operator=(const Cat& other);
 		~Cat() override;
 		void makeSound() const override;
+		void setIdea(const std::string idea);
+		void printIdeas() const;
 	private:
 		std::unique_ptr<Brain> brain_;
 };

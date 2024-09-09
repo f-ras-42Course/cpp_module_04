@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 12:02:56 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/09 16:42:13 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 # define DOG_HPP
 
 # include <iostream>
-# include "Brain.hpp"
 # include "Animal.hpp"
-# include <memory>
+# include "Brain.hpp"
 
 class Dog: public Animal
 {
@@ -26,6 +25,8 @@ class Dog: public Animal
 		Dog& operator=(const Dog& other);
 		~Dog() override;
 		void makeSound() const override;
+		void setIdea(const std::string idea);
+		void printIdeas() const;
 	private:
 		std::unique_ptr<Brain> brain_;
 };

@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/26 18:23:34 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/09 16:42:03 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define ANIMAL_HPP
 
 # include <iostream>
+# include <string>
+# include <memory>
 
 class Animal
 {
-	protected:
-		std::string type_;
 	public:
 		Animal();
 		Animal(const Animal& other);
@@ -26,6 +26,8 @@ class Animal
 		virtual ~Animal();
 		virtual void makeSound() const;
 		const std::string& getType() const;
+	protected:
+		std::string type_;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 13:32:40 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/09 16:06:52 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,14 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
 	std::cout << "Woof, wooffff, wooffffffffff\n";
+}
+
+void Dog::setIdea(const std::string idea)
+{
+	brain_->setIdea(idea);
+}
+
+void Dog::printIdeas() const
+{
+	brain_->printIdeas();
 }

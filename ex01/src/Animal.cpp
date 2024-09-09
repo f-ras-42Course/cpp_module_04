@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/26 18:24:48 by fras          ########   odam.nl         */
+/*   Updated: 2024/09/09 16:07:43 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ Animal::Animal(const Animal& other)
 Animal& Animal::operator=(const Animal& other)
 {
 	std::cout << "Animal copy assignment operator called\n";
-	type_ = other.type_;
+	if (this != &other)
+	{
+		type_ = other.type_;
+	}
 	return *this;
 }
 
