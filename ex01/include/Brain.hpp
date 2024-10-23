@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 18:21:48 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 16:07:08 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/23 16:52:40 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ class Brain
 {
 	public:
 		Brain();
+		~Brain();
 		Brain(const Brain& other);
 		Brain& operator=(const Brain& other);
-		~Brain();
 		void setIdea(const std::string idea);
 		void printIdeas() const;
 	private:

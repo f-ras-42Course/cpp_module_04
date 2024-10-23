@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/08/26 18:23:07 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 17:16:28 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/23 16:52:16 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ Brain::Brain()
 {
 	std::cout << "Brain constructor called\n";
 }
+
+Brain::~Brain()
+{
+	std::cout << "Brain deconstructor called\n";
+}
+
 Brain::Brain(const Brain& other)
 {
 	std::cout << "Brain copy constructor called\n";
@@ -33,11 +39,6 @@ Brain& Brain::operator=(const Brain& other)
 		total_stored_ = other.total_stored_;
 	}
 	return *this;
-}
-
-Brain::~Brain()
-{
-	std::cout << "Brain deconstructor called\n";
 }
 
 void Brain::setIdea(const std::string idea)

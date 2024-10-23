@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/08/26 18:23:48 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/23 16:52:49 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class WrongAnimal
 		std::string type_;
 	public:
 		WrongAnimal();
+		~WrongAnimal();
 		WrongAnimal(const WrongAnimal& other);
 		WrongAnimal& operator=(const WrongAnimal& other);
-		~WrongAnimal();
 		void makeSound() const;
 		const std::string& getType() const;	
 };

@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 16:06:41 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/23 16:52:03 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ Cat::Cat()
 {
 	std::cout << "Cat constructor called\n";
 	type_ = "Cat";
+}
+
+Cat::~Cat()
+{
+	std::cout << "Cat deconstructor called\n";
 }
 
 Cat::Cat(const Cat& other)
@@ -36,11 +41,6 @@ Cat& Cat::operator=(const Cat& other)
 		*brain_ = *other.brain_;
 	}
 	return *this;
-}
-
-Cat::~Cat()
-{
-	std::cout << "Cat deconstructor called\n";
 }
 
 void Cat::makeSound() const

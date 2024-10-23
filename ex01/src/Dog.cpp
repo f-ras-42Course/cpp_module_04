@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 16:06:52 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/23 16:52:01 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ Dog::Dog()
 {
 	std::cout << "Dog constructor called\n";
 	type_ = "Dog";
+}
+
+Dog::~Dog()
+{
+	std::cout << "Dog deconstructor called\n";
 }
 
 Dog::Dog(const Dog& other)
@@ -36,11 +41,6 @@ Dog& Dog::operator=(const Dog& other)
 		*brain_ = *other.brain_;
 	}
 	return *this;
-}
-
-Dog::~Dog()
-{
-	std::cout << "Dog deconstructor called\n";
 }
 
 void Dog::makeSound() const

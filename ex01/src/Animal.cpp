@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 16:07:43 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/23 16:52:28 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ Animal::Animal()
 	std::cout << "Animal constructor called\n";
 	type_ = "Animal";
 }
+
+Animal::~Animal()
+{
+	std::cout << "Animal deconstructor called\n";
+}
+
 Animal::Animal(const Animal& other)
 {
 	std::cout << "Animal copy constructor called\n";
@@ -31,11 +37,6 @@ Animal& Animal::operator=(const Animal& other)
 		type_ = other.type_;
 	}
 	return *this;
-}
-
-Animal::~Animal()
-{
-	std::cout << "Animal deconstructor called\n";
 }
 
 void Animal::makeSound() const
