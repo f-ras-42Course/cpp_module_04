@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/06/01 13:02:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/24 18:35:29 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 18:35:39 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int main()
 		std::cout << "Test 1:\n";
 		const Animal* freddie = new Dog();
 		const Animal* simba = new Cat();
+		freddie->makeSound();
+		simba->makeSound();
 		delete freddie;
 		delete simba;
 	}
@@ -75,11 +77,11 @@ int main()
 		std::cout << "----- Print ideas 4 -----\n";
 		mufasa.printIdeas();
 	}
-	{
-		std::cout << "\nTest 5:\n";
-		const Animal* meta = new Animal();
-		meta->makeSound();
-		delete meta;
-	}
+	// Should not compile:
+	// {
+	// 	std::cout << "\nTest 5:\n";
+	// 	const Animal* meta = new Animal();
+	// 	delete meta;
+	// }
 	return 0;
 }
