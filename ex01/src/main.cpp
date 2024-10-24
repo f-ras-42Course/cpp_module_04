@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/06/01 13:02:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/09/09 17:18:22 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 14:13:12 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int main()
 		std::cout << "----- Print ideas 3 -----\n";
 		simba.printIdeas();
 		rambo.printIdeas();
-		std::cout << "----- Make new cat via copy! -----\n";
+		std::cout << "----- Make new cat via copy! (Mufasa) -----\n";
 		Cat mufasa(rambo);
 		std::cout << "----- Print ideas 4 -----\n";
 		mufasa.printIdeas();

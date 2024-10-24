@@ -6,14 +6,14 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/23 16:52:01 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 13:36:21 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog()
-: brain_(std::make_unique<Brain>())
+: brain_(new Brain)
 {
 	std::cout << "Dog constructor called\n";
 	type_ = "Dog";
@@ -25,7 +25,7 @@ Dog::~Dog()
 }
 
 Dog::Dog(const Dog& other)
-: brain_(std::make_unique<Brain>())
+: brain_(new Brain)
 {
 	std::cout << "Dog copy constructor called\n";
 	type_ = other.type_;
@@ -37,6 +37,7 @@ Dog& Dog::operator=(const Dog& other)
 	std::cout << "Dog copy assignment operator called\n";
 	if (this != &other)
 	{
+		brain_ = new Brain;
 		type_ = other.type_;
 		*brain_ = *other.brain_;
 	}

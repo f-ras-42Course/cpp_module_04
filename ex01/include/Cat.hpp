@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/23 16:52:43 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 12:33:51 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Cat: public Animal
 		void setIdea(const std::string idea);
 		void printIdeas() const;
 	private:
-		std::unique_ptr<Brain> brain_;
+		Brain* brain_;
 };
 
 #endif
