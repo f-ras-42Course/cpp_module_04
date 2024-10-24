@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.hpp                                         :+:    :+:            */
+/*   AbstractAnimal.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AbstractAnimal_HPP
+# define AbstractAnimal_HPP
 
 # include <iostream>
 # include <string>
 # include <memory>
 
-class Animal
+class AbstractAnimal
 {
 	public:
-		virtual ~Animal();
+		virtual ~AbstractAnimal();
 		virtual void makeSound() const = 0;
 	protected:
 		std::string type_;
 		
-		Animal();
-		Animal(const Animal& other);
-		Animal& operator=(const Animal& other);
+		AbstractAnimal();
+		AbstractAnimal(const AbstractAnimal& other);
+		AbstractAnimal& operator=(const AbstractAnimal& other);
 		const std::string& getType() const;
 };
 

@@ -6,12 +6,12 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/23 16:52:49 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 18:39:16 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef WrongAnimal_HPP
+# define WrongAnimal_HPP
 
 # include <iostream>
 

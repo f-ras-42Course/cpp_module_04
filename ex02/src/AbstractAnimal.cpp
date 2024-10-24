@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.cpp                                         :+:    :+:            */
+/*   AbstractAnimal.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -10,28 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AbstractAnimal.hpp"
 
-Animal::Animal()
+AbstractAnimal::AbstractAnimal()
 {
-	std::cout << "Animal constructor called\n";
-	type_ = "Animal";
+	std::cout << "AbstractAnimal constructor called\n";
+	type_ = "AbstractAnimal";
 }
 
-Animal::~Animal()
+AbstractAnimal::~AbstractAnimal()
 {
-	std::cout << "Animal deconstructor called\n";
+	std::cout << "AbstractAnimal deconstructor called\n";
 }
 
-Animal::Animal(const Animal& other)
+AbstractAnimal::AbstractAnimal(const AbstractAnimal& other)
 {
-	std::cout << "Animal copy constructor called\n";
+	std::cout << "AbstractAnimal copy constructor called\n";
 	type_ = other.type_;
 }
 
-Animal& Animal::operator=(const Animal& other)
+AbstractAnimal& AbstractAnimal::operator=(const AbstractAnimal& other)
 {
-	std::cout << "Animal copy assignment operator called\n";
+	std::cout << "AbstractAnimal copy assignment operator called\n";
 	if (this != &other)
 	{
 		type_ = other.type_;
@@ -39,12 +39,12 @@ Animal& Animal::operator=(const Animal& other)
 	return *this;
 }
 
-void Animal::makeSound() const
+void AbstractAnimal::makeSound() const
 {
-	std::cout << "The Animal makes a sound\n";
+	std::cout << "The AbstractAnimal makes a sound\n";
 }
 
-const std::string& Animal::getType() const
+const std::string& AbstractAnimal::getType() const
 {
 	return this->type_;
 }

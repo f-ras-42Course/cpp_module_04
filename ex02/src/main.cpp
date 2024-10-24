@@ -6,11 +6,11 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/06/01 13:02:56 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/24 18:35:39 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 18:40:17 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AbstractAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
@@ -20,8 +20,8 @@ int main()
 {
 	{
 		std::cout << "Test 1:\n";
-		const Animal* freddie = new Dog();
-		const Animal* simba = new Cat();
+		const AbstractAnimal* freddie = new Dog();
+		const AbstractAnimal* simba = new Cat();
 		freddie->makeSound();
 		simba->makeSound();
 		delete freddie;
@@ -29,19 +29,19 @@ int main()
 	}
 	{
 		std::cout << "\nTest 2:\n";
-		const size_t animal_quantity = 4;
-		Animal *animals[animal_quantity];
-		for (size_t i = 0; i < animal_quantity; i++)
+		const size_t Animal_quantity = 4;
+		AbstractAnimal *Animals[Animal_quantity];
+		for (size_t i = 0; i < Animal_quantity; i++)
 		{
-			if (i < animal_quantity / 2)
-				animals[i] = new Dog();
+			if (i < Animal_quantity / 2)
+				Animals[i] = new Dog();
 			else
-				animals[i] = new Cat();
+				Animals[i] = new Cat();
 
 		}
-		for (size_t i = 0; i < animal_quantity; i++)
+		for (size_t i = 0; i < Animal_quantity; i++)
 		{
-			delete animals[i];
+			delete Animals[i];
 		}
 	}
 	{
@@ -80,7 +80,7 @@ int main()
 	// Should not compile:
 	// {
 	// 	std::cout << "\nTest 5:\n";
-	// 	const Animal* meta = new Animal();
+	// 	const AbstractAnimal* meta = new AbstractAnimal();
 	// 	delete meta;
 	// }
 	return 0;

@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/24 12:33:44 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 18:38:09 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define DOG_HPP
 
 # include <iostream>
-# include "Animal.hpp"
+# include "AbstractAnimal.hpp"
 # include "Brain.hpp"
 
-class Dog: public Animal
+class Dog: public AbstractAnimal
 {
 	public:
 		Dog();

@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:03 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/24 12:33:51 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/24 18:38:09 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include "Brain.hpp"
 # include <iostream>
-# include "Animal.hpp"
+# include "AbstractAnimal.hpp"
 
-class Cat: public Animal
+class Cat: public AbstractAnimal
 {
 	public:
 		Cat();

@@ -6,11 +6,11 @@
 #    By: fras <fras@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/05/30 16:42:20 by fras          #+#    #+#                  #
-#    Updated: 2024/09/09 13:37:31 by fras          ########   odam.nl          #
+#    Updated: 2024/10/24 18:45:16 by fras          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = abstract
 CC = c++
 CFLAGS = -Werror -Wextra -Wall
 INCLUDE = -I include
