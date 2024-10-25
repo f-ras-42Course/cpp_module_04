@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/24 13:36:21 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/25 17:16:52 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Dog::Dog()
 Dog::~Dog()
 {
 	std::cout << "Dog deconstructor called\n";
+	delete brain_;
 }
 
 Dog::Dog(const Dog& other)
@@ -37,7 +38,6 @@ Dog& Dog::operator=(const Dog& other)
 	std::cout << "Dog copy assignment operator called\n";
 	if (this != &other)
 	{
-		brain_ = new Brain;
 		type_ = other.type_;
 		*brain_ = *other.brain_;
 	}

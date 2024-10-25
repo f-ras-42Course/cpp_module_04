@@ -6,7 +6,7 @@
 /*   By: fras <fras@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/30 16:58:08 by fras          #+#    #+#                 */
-/*   Updated: 2024/10/24 13:34:38 by fras          ########   odam.nl         */
+/*   Updated: 2024/10/25 17:07:28 by fras          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Cat::Cat()
 Cat::~Cat()
 {
 	std::cout << "Cat deconstructor called\n";
+	delete brain_;
 }
 
 Cat::Cat(const Cat& other)
@@ -37,7 +38,6 @@ Cat& Cat::operator=(const Cat& other)
 	std::cout << "Cat copy assignment operator called\n";
 	if (this != &other)
 	{
-		brain_ = new Brain;
 		type_ = other.type_;
 		*brain_ = *other.brain_;
 	}
